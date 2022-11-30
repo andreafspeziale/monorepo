@@ -1,6 +1,6 @@
 {
   "name": "@andreafspeziale/ts-config-base",
-  "version": "1.0.0-rc.0",
+  "version": "1.0.0",
   "description": "Shared TSConfigs",
   "author": "Andrea Francesco Speziale",
   "private": false,

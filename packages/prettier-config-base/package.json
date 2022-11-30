@@ -1,6 +1,6 @@
 {
   "name": "@andreafspeziale/prettier-config-base",
-  "version": "1.0.0-rc.0",
+  "version": "1.0.0",
   "description": "Shared Prettier configuration",
   "main": "index.js",
   "author": "Andrea Francesco Speziale",

@@ -2,13 +2,13 @@
   "mode": "pre",
   "tag": "rc",
   "initialVersions": {
-    "sample-app": "1.0.0-rc.0",
-    "@andreafspeziale/eslint-config-base": "1.0.0-rc.0",
-    "@andreafspeziale/jest-config-base": "1.0.0-rc.0",
-    "@andreafspeziale/common": "1.0.0-rc.0",
-    "@andreafspeziale/logger": "1.0.0-rc.0",
-    "@andreafspeziale/prettier-config-base": "1.0.0-rc.0",
-    "@andreafspeziale/ts-config-base": "1.0.0-rc.0"
+    "sample-app": "1.0.0",
+    "@andreafspeziale/common": "1.0.0",
+    "@andreafspeziale/eslint-config-base": "1.0.0",
+    "@andreafspeziale/jest-config-base": "1.0.0",
+    "@andreafspeziale/logger": "1.0.0",
+    "@andreafspeziale/prettier-config-base": "1.0.0",
+    "@andreafspeziale/ts-config-base": "1.0.0"
   },
   "changesets": []
 }
