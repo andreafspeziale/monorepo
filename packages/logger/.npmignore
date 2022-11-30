@@ -1,0 +1,9 @@
+.turbo
+coverage
+src
+.eslintrc.js
+.prettierrc.js
+docker-compose.*
+jest*
+tsconfig.build.json
+tsconfig.json

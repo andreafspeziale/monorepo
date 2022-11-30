@@ -1,0 +1,50 @@
+{
+  "name": "monorepo",
+  "version": "0.0.0",
+  "author": "Andrea Francesco Speziale",
+  "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andreafspeziale/monorepo"
+  },
+  "bugs": {
+    "url": "https://github.com/andreafspeziale/monorepo/issues"
+  },
+  "keywords": [
+    "nest",
+    "nestjs",
+    "typescript",
+    "config",
+    "monorepo",
+    "turborepo"
+  ],
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "prepare": "husky install",
+    "build": "turbo run build",
+    "format": "turbo run format",
+    "lint": "turbo run lint",
+    "test": "turbo run test"
+  },
+  "engines": {
+    "node": ">=18.5.0"
+  },
+  "packageManager": "pnpm@7.17.1",
+  "devDependencies": {
+    "@changesets/changelog-github": "0.4.7",
+    "@changesets/cli": "2.25.2",
+    "@commitlint/cli": "17.2.0",
+    "@commitlint/config-conventional": "17.2.0",
+    "husky": "8.0.2",
+    "turbo": "1.6.3"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  }
+}

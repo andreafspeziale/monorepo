@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "f9ede298-91c6-4a44-8b3a-a814d36c93a9",
+		"name": "Health",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21843533"
+	},
+	"item": [
+		{
+			"name": "Get health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/{{prefix}}/{{controller}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"{{prefix}}",
+						"{{controller}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200. OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/{{prefix}}/{{controller}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"{{prefix}}",
+								"{{controller}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "103"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"67-I4RuYW7bxvDhCouaR3U+HD0cUeU\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 04 Nov 2022 22:17:36 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"ok\",\n    \"info\": {\n        \"redis\": {\n            \"status\": \"up\"\n        }\n    },\n    \"error\": {},\n    \"details\": {\n        \"redis\": {\n            \"status\": \"up\"\n        }\n    }\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "controller",
+			"value": "healthz",
+			"type": "string"
+		}
+	]
+}

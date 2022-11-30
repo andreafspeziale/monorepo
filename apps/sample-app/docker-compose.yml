@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  cache:
+    container_name: cache
+    image: bitnami/redis:7.0.5
+    ports:
+      - ${CACHE_PORT}:${CACHE_PORT}
+    environment:
+      ALLOW_EMPTY_PASSWORD: true
+    volumes:
+      - cache-data:/bitnami/redis/data
+volumes:
+  cache-data:

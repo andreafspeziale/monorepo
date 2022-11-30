@@ -1,0 +1,38 @@
+{
+  "name": "@andreafspeziale/ts-config-base",
+  "version": "1.0.0-rc.0",
+  "description": "Shared TSConfigs",
+  "author": "Andrea Francesco Speziale",
+  "private": false,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andreafspeziale/monorepo"
+  },
+  "bugs": {
+    "url": "https://github.com/andreafspeziale/monorepo/issues"
+  },
+  "keywords": [
+    "nest",
+    "nestjs",
+    "typescript",
+    "config",
+    "tsconfig"
+  ],
+  "files": [
+    "node18-strictest-esm.json",
+    "node18-strictest.json",
+    "node18.json"
+  ],
+  "peerDependencies": {
+    "typescript": "4.x"
+  },
+  "devDependencies": {
+    "@tsconfig/node18": "1.0.1",
+    "@tsconfig/node18-strictest": "1.0.0",
+    "@tsconfig/node18-strictest-esm": "1.0.1"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
+}
