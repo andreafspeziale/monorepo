@@ -1,6 +1,6 @@
 {
   "name": "sample-app",
-  "version": "1.0.0",
+  "version": "1.0.1-rc.0",
   "description": "Sample app in order to have a reference for future new applications",
   "author": "Andrea Francesco Speziale",
   "private": true,

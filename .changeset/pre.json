@@ -10,5 +10,7 @@
     "@andreafspeziale/prettier-config-base": "1.0.0",
     "@andreafspeziale/ts-config-base": "1.0.0"
   },
-  "changesets": []
+  "changesets": [
+    "slow-walls-sing"
+  ]
 }
