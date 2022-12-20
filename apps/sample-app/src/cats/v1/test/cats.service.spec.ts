@@ -39,48 +39,44 @@ describe('CatsService (spec)', () => {
   it('Should return the expected cat', async () => {
     const expectedCat = { id: 1, name: 'Bubi', age: 7 };
 
-    const mockMemcachedGet = jest.spyOn(cacheManager, 'get');
-    const mockMemcachedSetWithMeta = jest.spyOn(cacheManager, 'set');
+    const mockCacheGet = jest.spyOn(cacheManager, 'get');
+    const mockCacheSet = jest.spyOn(cacheManager, 'set');
 
-    mockMemcachedGet.mockResolvedValueOnce(null);
-    mockMemcachedSetWithMeta.mockResolvedValueOnce();
+    mockCacheGet.mockResolvedValueOnce(null);
+    mockCacheSet.mockResolvedValueOnce();
 
     expect(await catsService.getCat(1)).toEqual(expectedCat);
 
-    expect(mockMemcachedGet).toHaveBeenNthCalledWith(1, expectedCat.id.toString());
-    expect(mockMemcachedSetWithMeta).toHaveBeenNthCalledWith(
-      1,
-      expectedCat.id.toString(),
-      expectedCat,
-    );
+    expect(mockCacheGet).toHaveBeenNthCalledWith(1, expectedCat.id.toString());
+    expect(mockCacheSet).toHaveBeenNthCalledWith(1, expectedCat.id.toString(), expectedCat);
   });
 
   it('Should return the expected cached cat', async () => {
     const expectedCachedCat: Cat = { id: 1, name: 'Bubi', age: 7 };
 
-    const mockMemcachedGet = jest.spyOn(cacheManager, 'get');
-    const mockMemcachedSetWithMeta = jest.spyOn(cacheManager, 'set');
+    const mockCacheGet = jest.spyOn(cacheManager, 'get');
+    const mockCacheSet = jest.spyOn(cacheManager, 'set');
 
-    mockMemcachedGet.mockResolvedValueOnce(expectedCachedCat);
+    mockCacheGet.mockResolvedValueOnce(expectedCachedCat);
 
     expect(await catsService.getCat(1)).toEqual(expectedCachedCat);
 
-    expect(mockMemcachedGet).toHaveBeenNthCalledWith(1, expectedCachedCat.id.toString());
-    expect(mockMemcachedSetWithMeta).toHaveBeenCalledTimes(0);
+    expect(mockCacheGet).toHaveBeenNthCalledWith(1, expectedCachedCat.id.toString());
+    expect(mockCacheSet).toHaveBeenCalledTimes(0);
   });
 
   it('Should throw the expected exception', async () => {
     const catId = 2;
 
-    const mockMemcachedGet = jest.spyOn(cacheManager, 'get');
-    const mockMemcachedSet = jest.spyOn(cacheManager, 'set');
+    const mockCacheGet = jest.spyOn(cacheManager, 'get');
+    const mockCacheSet = jest.spyOn(cacheManager, 'set');
 
     jest.spyOn(cacheManager, 'get').mockResolvedValueOnce(null);
 
     await expect(catsService.getCat(catId)).rejects.toThrow(NotFoundException);
 
-    expect(mockMemcachedGet).toHaveBeenNthCalledWith(1, catId.toString());
-    expect(mockMemcachedSet).toHaveBeenCalledTimes(0);
+    expect(mockCacheGet).toHaveBeenNthCalledWith(1, catId.toString());
+    expect(mockCacheSet).toHaveBeenCalledTimes(0);
   });
 
   afterEach(async () => {
