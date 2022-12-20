@@ -21,13 +21,16 @@ export const getExceptionsFilterProvider = (): Provider => ({
 
 // ! https://github.com/dabroek/node-cache-manager-redis-store/issues/40
 // ! https://github.com/dabroek/node-cache-manager-redis-store/issues/52
-export const getRedisStore = async ({ host, port, ttl }: Cache): Promise<any> => ({
-  store: await redisStore({
+export const getRedisStore = async ({ host, port, ttl }: Cache): Promise<any> => {
+  const store = await redisStore({
     socket: {
       host,
       port,
-      keepAlive: 10,
     },
     ttl,
-  }),
-});
+  });
+
+  return {
+    store: () => store,
+  };
+};

@@ -27,8 +27,7 @@ describe('CatsService (spec)', () => {
         }),
         CacheModule.registerAsync({
           isGlobal: true,
-          useFactory: async (cs: ConfigService<Config, true>) =>
-            await getRedisStore(cs.get<Cache>('cache')),
+          useFactory: (cs: ConfigService<Config, true>) => getRedisStore(cs.get<Cache>('cache')),
           inject: [ConfigService],
         }),
         CatsModule,
