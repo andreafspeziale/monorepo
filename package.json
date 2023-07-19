@@ -1,5 +1,6 @@
 {
   "name": "monorepo",
+  "description": "Opinionated Monorepo Toolkit",
   "version": "0.0.0",
   "author": "Andrea Francesco Speziale",
   "private": true,

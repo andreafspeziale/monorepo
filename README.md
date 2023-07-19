@@ -1,14 +1,20 @@
 <div align="center">
-  <a href="https://turbo.build" target="blank">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/4060187/196936123-f6e1db90-784d-4174-b774-92502b718836.png">
-      <img src="https://user-images.githubusercontent.com/4060187/196936104-5797972c-ab10-4834-bd61-0d1e5f442c9c.png" height="128" alt="Turborepo Logo">
-    </picture>
-  </a>
-  <b>+</b>
-  <a href="https://nestjs.com/" target="blank">
-    <img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" />
-  </a>
+  <p>
+    <a href="https://turbo.build" target="blank">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/4060187/196936123-f6e1db90-784d-4174-b774-92502b718836.png">
+        <img src="https://user-images.githubusercontent.com/4060187/196936104-5797972c-ab10-4834-bd61-0d1e5f442c9c.png" height="128" alt="Turborepo Logo">
+      </picture>
+    </a>
+    &nbsp&nbsp&nbsp
+    <a href="https://nestjs.com/" target="blank">
+      <img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" />
+    </a>
+  </p>
+  <p>
+    <a href="https://turbo.build/repo" target="blank">Turborepo</a> template for <a href="https://github.com/nestjs/nest" target="blank">Nest</a>,<br>
+    a progressive Node.js framework for building efficient and scalable server-side applications.
+  </p>
 </div>
 
 # Monorepo
